@@ -1,0 +1,377 @@
+/* styles.css */
+@font-face {
+    font-family: 'text';
+    src: url('font/PayPalOpen-Regular.ttf') format('truetype');
+}
+
+@font-face {  
+  font-family: 'title';
+  src: url('font/SupremeLL-Black.otf') format('opentype');
+}
+
+@font-face {  
+  font-family: 'bold';
+  src: url('font/SupremeLL-Bold.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'text', sans-serif;
+}
+
+body {
+  margin-top:2rem;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f0f2f9;
+  color: #333;
+  /* padding rimosso */
+  overflow-x: hidden; /* evita scroll laterale del body */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+/* Impedisce di selezionare e trascinare */
+body, img, * {
+  user-select: none;    /* niente selezione testo */
+  -webkit-user-drag: none; /* disabilita drag immagini su WebKit */
+  -moz-user-select: none;   /* Firefox */
+  -ms-user-select: none;    /* IE/Edge */
+}
+
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: transparent;
+  color: inherit;
+}
+
+
+
+h1 {
+  font-size: 28px;
+  font-family: 'title';
+  color: black;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: black;
+  font-family: 'bold';
+  font-size: 16px;
+}
+
+h4 {
+  color: black;
+  font-family: 'bold';
+  font-size: 15px;
+  margin: 0;
+}
+
+p {
+  font-size: 12px;
+  color: rgb(14, 14, 14);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbuttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  color: #408cf7;
+  border: none;
+}
+
+.navbar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar button img {
+  margin-top: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 0;
+}
+
+.box {
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.saldo .box {
+  text-align: left;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.saldo .box p {
+  font-size: 12px;
+}
+
+.sabox {
+  margin-top: 1rem;
+}
+
+.sabox h4 {
+  margin: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.send-again-wrapper {
+  overflow-x: auto;
+  padding: 0 1rem; /* Spazio visivo ai lati */
+}
+
+.send-again-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.send-again {
+  display: flex;
+  gap: 30px;
+}
+
+.sa-item {
+  min-width: 70px;
+  text-align: center;
+}
+
+.sa-item p {
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.profile-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px auto;
+}
+
+
+/* Sezione transazioni */
+.transactions {
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 10px;
+  min-height: 100px;
+  margin-bottom: 80px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.transaction-box {
+  border-bottom: 2px solid #f0f2f9;
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+
+.trans-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.foto-cerchio {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #0070ba;
+  color: white;
+  font-size: 15px;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info p {
+  font-size: 12px;
+  color: #555;
+  padding-bottom: 5px;
+  margin-top: 8px;
+}
+
+.trans-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.trans-bottom p {
+  font-size: 12px;
+  color: #555;
+}
+
+
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+  transform: translateZ(0);
+  will-change: transform;
+  overscroll-behavior: contain;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.icon-wrapper {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  height: 38px;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.special-bg {
+  background-color: #0066f5;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+.billions {
+  flex: 1;
+  padding: 20px;
+  background: transparent;
+}
+
+.contatto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contatto img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.info input {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #000;
+  width: 200px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  width: fit-content;
+}
+
+.input-container .currency {
+  font-size: 20px;
+  color: #000;
+}
+
+.input-container input {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  width: 100px;
+  text-align: center;
+  color: #000;
+}
+
+.input-container img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Contenitore in fondo che si adatta alla tastiera */
+.bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+#messaggio {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+#button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#button-row button {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+}

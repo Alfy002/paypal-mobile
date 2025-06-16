@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal: Send Money</title>
+    <link rel="stylesheet" href="style-send.css">
+	<link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<body>
+    
+    <nav>
+        <div class="back"><a href="index.html"><img src="img/back.png"></a></div>
+        <h2>Amount</h2>
+        <div class="back"><img src="img/back.png" id="invis"></div>
+
+    </nav>
+    <div class="invia">
+        <div class="contatto">
+            <img src="img/profilo.png">
+            <div class="info">
+                <h3><input type="text" id="name" autocomplete="off" placeholder="@username" autofocus></h3>
+            </div>
+        </div>
+    
+        <h1>
+            <div class="input-container">
+                <div>
+                    <span class="currency">€</span>
+                    <input type="tel" id="euro" autocomplete="off" placeholder="0,00">
+                </div>
+                <img src="img/eur.png">    
+            </div>
+        </h1>
+    </div>
+    
+    <!-- Container fisso in basso -->
+    <div class="bottom-fixed">
+        <input type="text" id="messaggio" autocomplete="off" placeholder="Add a message">
+        <div id="button-row">
+            <button>Request</button>
+            <button id="sends">Send</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

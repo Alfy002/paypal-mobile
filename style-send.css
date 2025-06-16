@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'text';
+    src: url('font/PayPalOpen-Regular.ttf') format('truetype');
+}
+
+@font-face {  
+  font-family: 'title';
+  src: url('font/SupremeLL-Black.otf') format('opentype');
+}
+
+@font-face {  
+  font-family: 'bold';
+  src: url('font/SupremeLL-Bold.otf') format('opentype');
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+  }
+
+  .shake {
+    animation: shake 0.3s;
+    color: #CC3333 !important; /* diventa rosso subito */
+    transition: none !important; /* niente transizione quando diventa rosso */
+  }
+  
+
+/* reset e box‐sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'text';
+}
+  
+  /* font e background globali */
+  body {
+    margin-top:2rem;
+    font-family: 'text';
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+
+  ::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+
+  
+
+  /* NAVBAR */
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+  }
+  
+  /* se nel nav metti un <div class="back"></div> per la freccia */
+  nav img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* titolo “Importo” al centro */
+  nav h2 {
+    font-size: 13px;
+    font-weight:normal;
+  }
+
+  #invis {
+    opacity: 0;
+  }
+
+
+
+
+  /* sezione contatto */
+  .contatto {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 18px;
+  }
+  
+  .contatto img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .contatto .info input {
+    font-family: 'title';
+    font-size: 20px;
+    border: none;
+    outline: none;
+    width: auto;
+    padding-bottom: 7px;
+  }
+  
+  #name::placeholder{
+    font-family: 'bold';
+    color: #b8b8b8;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input-container .currency {
+    color: #2e2e2e;
+    font-size: 48px;
+    margin-right: 0px;
+    font-weight: normal;
+  }
+  
+  .input-container input {
+    font-size: 48px;
+    color: #2e2e2e;
+    margin-top: 7px;
+    border: none;
+    outline: none;
+    width: 85%;
+    transition: color 0.3s ease;
+  }
+
+  #euro::placeholder{
+    color: #2e2e2e;
+  }
+  
+  .input-container img {
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  /* barra fissa in basso */
+  .bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 16px;
+  }
+  
+  /* input messaggio */
+  .bottom-fixed #messaggio {
+    width: 100%;
+    padding-left: 16px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    border: 0;
+    background-color: #f1efea;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  /* riga dei bottoni */
+  #button-row {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* stili bottoni */
+  button {
+    font-family: 'bold';
+    flex: 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+.buttonss {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 42%;
+  padding-right: 42%;
+}
+
+.msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  min-width: 300px;
+}
+  
+.msg h2, #recipientName1, #amount{
+  font-family: 'title';
+  line-height: 1.5rem;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.msg p, #recipientName2{
+  line-height: 1rem;
+  font-size: 12px;
+}
+
+#blud {
+  bottom: 12px;
+  white-space: nowrap;
+  text-align: center;
+  color: #0066f5;
+  font-family: "text";
+  background-color: transparent;
+  font-size: 13px;
+}
